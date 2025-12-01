@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to custom domain (optional)
+https://your-app.netlify.app/* https://adomenikresidence.com/:splat 301!
+
+# SPA fallback
+/*    /index.html   200

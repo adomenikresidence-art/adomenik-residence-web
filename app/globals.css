@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* 60%: neutral, calm background + text */
+  --background: oklch(0.97 0.015 90);    /* light warm gray */
+  --foreground: oklch(0.22 0.03 260);    /* deep charcoal with a cool hint */
+
+  --card: oklch(0.985 0.01 90);
+  --card-foreground: oklch(0.22 0.03 260);
+
+  --popover: oklch(0.99 0.01 90);
+  --popover-foreground: oklch(0.22 0.03 260);
+
+  /* 30%: primary = trust / professionalism (navy) */
+  --primary: oklch(0.45 0.08 250);       /* refined navy blue */
+  --primary-foreground: oklch(0.98 0.01 95);
+
+  /* Secondary = soft beige/stone for panels, chips */
+  --secondary: oklch(0.93 0.02 85);
+  --secondary-foreground: oklch(0.26 0.03 260);
+
+  /* Muted sections (e.g. “4 of 6 Units Sold”) */
+  --muted: oklch(0.94 0.015 85);
+  --muted-foreground: oklch(0.5 0.03 260);
+
+  /* 10%: accent = subtle gold for highlights, icons, small CTAs */
+  --accent: oklch(0.78 0.09 85);         /* soft, not Vegas-gold */
+  --accent-foreground: oklch(0.22 0.03 260);
+
+  /* Destructive, kept in same professional vibe */
+  --destructive: oklch(0.55 0.17 25);    /* muted red */
+  --destructive-foreground: oklch(0.98 0.01 95);
+
+  --border: oklch(0.9 0.015 90);
+  --input: oklch(0.9 0.015 90);
+  --ring: oklch(0.45 0.08 250);          /* navy focus ring */
+
+  /* Charts – variations that still feel corporate */
+  --chart-1: oklch(0.45 0.08 250);       /* navy */
+  --chart-2: oklch(0.6 0.07 220);        /* muted blue */
+  --chart-3: oklch(0.55 0.06 180);       /* teal accent */
+  --chart-4: oklch(0.78 0.09 85);        /* gold */
+  --chart-5: oklch(0.7 0.05 40);         /* warm stone */
+
+  --radius: 0.5rem;
+
+  /* Sidebar aligned with main theme */
+  --sidebar: oklch(0.975 0.012 90);
+  --sidebar-foreground: oklch(0.22 0.03 260);
+  --sidebar-primary: oklch(0.45 0.08 250);
+  --sidebar-primary-foreground: oklch(0.98 0.01 95);
+  --sidebar-accent: oklch(0.93 0.02 85);
+  --sidebar-accent-foreground: oklch(0.26 0.03 260);
+  --sidebar-border: oklch(0.9 0.015 90);
+  --sidebar-ring: oklch(0.45 0.08 250);
+}
+
+.dark {
+  /* Dark mode: same hues, reversed lightness */
+  --background: oklch(0.17 0.03 260);    /* deep charcoal/navy mix */
+  --foreground: oklch(0.96 0.015 95);
+
+  --card: oklch(0.2 0.03 260);
+  --card-foreground: oklch(0.96 0.015 95);
+
+  --popover: oklch(0.2 0.03 260);
+  --popover-foreground: oklch(0.96 0.015 95);
+
+  --primary: oklch(0.68 0.09 250);       /* brighter navy for dark bg */
+  --primary-foreground: oklch(0.12 0.02 260);
+
+  --secondary: oklch(0.28 0.03 260);
+  --secondary-foreground: oklch(0.96 0.015 95);
+
+  --muted: oklch(0.24 0.025 260);
+  --muted-foreground: oklch(0.72 0.035 260);
+
+  --accent: oklch(0.78 0.09 85);
+  --accent-foreground: oklch(0.16 0.02 260);
+
+  --destructive: oklch(0.55 0.17 25);
+  --destructive-foreground: oklch(0.96 0.015 95);
+
+  --border: oklch(0.28 0.03 260);
+  --input: oklch(0.28 0.03 260);
+  --ring: oklch(0.68 0.09 250);
+
+  --chart-1: oklch(0.68 0.09 250);
+  --chart-2: oklch(0.64 0.08 220);
+  --chart-3: oklch(0.62 0.07 180);
+  --chart-4: oklch(0.78 0.09 85);
+  --chart-5: oklch(0.7 0.05 40);
+
+  --sidebar: oklch(0.17 0.03 260);
+  --sidebar-foreground: oklch(0.96 0.015 95);
+  --sidebar-primary: oklch(0.68 0.09 250);
+  --sidebar-primary-foreground: oklch(0.12 0.02 260);
+  --sidebar-accent: oklch(0.24 0.025 260);
+  --sidebar-accent-foreground: oklch(0.96 0.015 95);
+  --sidebar-border: oklch(0.28 0.03 260);
+  --sidebar-ring: oklch(0.68 0.09 250);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-serif: "Crimson Text", "Georgia", serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
