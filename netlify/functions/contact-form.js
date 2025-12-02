@@ -93,7 +93,7 @@ exports.handler = async (event) => {
           ${message}
         </div>
         <p style="margin:0 0 12px 0;">
-          If you need to add anything else, you can simply reply to this email.
+          If you need to add anything else, you can send us an email on adomenikresidence@gmail.com.
         </p>
         <p style="margin-top:24px;font-size:12px;color:#9ca3af;">
           DomeNik Residence – Zakaki, Limassol, Cyprus
@@ -131,4 +131,5 @@ exports.handler = async (event) => {
       body: JSON.stringify({ error: "Internal Server Error" }),
     }
   }
+
 }
