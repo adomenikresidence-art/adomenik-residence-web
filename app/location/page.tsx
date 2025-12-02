@@ -1,29 +1,33 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
-import { MapPin, Train, Utensils, Palette, Waves, ShoppingBag } from "lucide-react"
+import { Train, Utensils, Palette, Waves, ShoppingBag, Bold as Golf } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Location - Zakaki, Limassol | Prime Cyprus Real Estate Location",
-  description: "Discover prime Zakaki location in Limassol, Cyprus. Walking distance to Mediterranean seafront, Lady's Mile Beach, Limassol Marina. Premium lifestyle with world-class amenities nearby.",
-  keywords: "Zakaki Limassol, Zakaki location, Limassol seafront, Lady's Mile Beach, Limassol Marina, Cyprus coastal living, prime Limassol location",
+  description:
+    "Discover prime Zakaki location in Limassol, Cyprus. Walking distance to Mediterranean seafront, Lady's Mile Beach, Limassol Marina, Limassol Greens Golf Course. Premium lifestyle with world-class amenities nearby.",
+  keywords:
+    "Zakaki Limassol, Zakaki location, Limassol seafront, Lady's Mile Beach, Limassol Marina, Limassol Greens Golf, Cyprus coastal living, prime Limassol location",
   openGraph: {
     title: "Location - Zakaki, Limassol | Prime Seafront Location",
-    description: "Prime Zakaki location near Mediterranean seafront, Lady's Mile Beach, and Limassol Marina.",
+    description:
+      "Prime Zakaki location near Mediterranean seafront, Lady's Mile Beach, Limassol Marina, and Limassol Greens Golf Course.",
     url: "https://a-domenik-residence.com/location",
     images: [
       {
         url: "/urban-walking-street-neighborhood.jpg",
         width: 1200,
         height: 630,
-        alt: "Zakaki neighborhood, Limassol, Cyprus"
-      }
-    ]
+        alt: "Zakaki neighborhood, Limassol, Cyprus",
+      },
+    ],
   },
   alternates: {
-    canonical: "https://a-domenik-residence.com/location"
-  }
+    canonical: "https://a-domenik-residence.com/location",
+  },
 }
 
 export default function LocationPage() {
@@ -61,11 +65,16 @@ export default function LocationPage() {
     {
       category: "Culture & Recreation",
       icon: Palette,
+      locations: ["Limassol Old Town (5 km)", "Limassol Castle", "Municipal Gardens", "Cultural festivals year-round"],
+    },
+    {
+      category: "Golf & Sports",
+      icon: Golf,
       locations: [
-        "Limassol Old Town (5 km)",
-        "Limassol Castle",
-        "Municipal Gardens",
-        "Cultural festivals year-round",
+        "Limassol Greens Golf Course (10-15 min)",
+        "Vikla Golf & Country Club (20 min)",
+        "Driving ranges & academies",
+        "Premium golf lifestyle",
       ],
     },
     {
@@ -96,6 +105,11 @@ export default function LocationPage() {
       name: "Limassol Marina",
       distance: "4 km",
       description: "Luxury marina with designer boutiques, gourmet restaurants, and exclusive yachting facilities.",
+    },
+    {
+      name: "Limassol Greens Golf Course",
+      distance: "10-15 min",
+      description: "Brand new 18-hole championship course (Par 71) next to Cyprus' largest Salt Lake.",
     },
     {
       name: "Zakaki Marsh Nature Reserve",
@@ -137,20 +151,21 @@ export default function LocationPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Place",
-            "name": "Zakaki, Limassol",
-            "description": "Prime coastal neighborhood in Limassol, Cyprus, near Lady's Mile Beach and Limassol Marina",
-            "address": {
+            name: "Zakaki, Limassol",
+            description:
+              "Prime coastal neighborhood in Limassol, Cyprus, near Lady's Mile Beach, Limassol Marina, and Limassol Greens Golf Course",
+            address: {
               "@type": "PostalAddress",
-              "addressLocality": "Zakaki",
-              "addressRegion": "Limassol",
-              "addressCountry": "CY"
+              addressLocality: "Zakaki",
+              addressRegion: "Limassol",
+              addressCountry: "CY",
             },
-            "geo": {
+            geo: {
               "@type": "GeoCoordinates",
-              "latitude": "34.684944",
-              "longitude": "33.027703"
-            }
-          })
+              latitude: "34.684944",
+              longitude: "33.027703",
+            },
+          }),
         }}
       />
 
@@ -163,8 +178,9 @@ export default function LocationPage() {
             </div>
             <h1 className="font-serif text-5xl lg:text-6xl font-semibold text-balance">Zakaki, Limassol</h1>
             <p className="text-lg text-foreground/80 max-w-2xl">
-              Situated in one of Limassol's most desirable coastal neighborhoods, our development offers unparalleled 
-              access to pristine beaches, luxury marinas, international schools, and Mediterranean lifestyle.
+              Situated in one of Limassol's most desirable coastal neighborhoods, our development offers unparalleled
+              access to pristine beaches, luxury marinas, world-class golf, international schools, and Mediterranean
+              lifestyle.
             </p>
           </div>
         </div>
@@ -192,7 +208,6 @@ export default function LocationPage() {
           </div>
         </div>
       </section>
-
 
       {/* Neighborhood Highlights */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary/5">
@@ -229,7 +244,7 @@ export default function LocationPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-4xl font-semibold mb-4 text-center">Nearby Attractions</h2>
           <p className="text-lg text-foreground/80 text-center mb-12 max-w-2xl mx-auto">
-            Everything you need is within minutes. From pristine Mediterranean beaches to world-class shopping, 
+            Everything you need is within minutes. From pristine Mediterranean beaches to world-class golf courses,
             Zakaki offers the perfect balance of coastal tranquility and urban convenience.
           </p>
 
@@ -254,7 +269,7 @@ export default function LocationPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-4xl font-semibold mb-4 text-center">Educational Excellence</h2>
           <p className="text-lg text-foreground/80 text-center mb-12 max-w-2xl mx-auto">
-            Zakaki is surrounded by prestigious international schools offering British, American, and IB curricula, 
+            Zakaki is surrounded by prestigious international schools offering British, American, and IB curricula,
             making it ideal for families seeking quality education in Cyprus.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -275,13 +290,79 @@ export default function LocationPage() {
         </div>
       </section>
 
+      {/* Golf Section - Add after Education section */}
+      {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-emerald-50 to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-4xl lg:text-5xl font-semibold mb-4">World-Class Golf Nearby</h2>
+            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+              Tee off at Cyprus' premier golf destinations just minutes from your doorstep.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            -- Limassol Greens
+            <Card className="p-8 group hover:shadow-xl transition-all border-0 bg-gradient-to-br from-green-50 to-emerald-50">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-4 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl shadow-lg">
+                  <Golf size={32} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-2xl font-semibold">Limassol Greens Golf Course</h3>
+                  <p className="text-sm text-emerald-600 font-semibold bg-emerald-100 px-3 py-1 rounded-full inline-block mt-1">
+                    10-15 min drive
+                  </p>
+                </div>
+              </div>
+              <p className="text-foreground/80 mb-6 leading-relaxed">
+                Brand new <strong>18-hole championship course</strong> (Par 71, 6,404m) designed by Cabell B. Robinson.
+                Next to Cyprus' largest Salt Lake with stunning Mediterranean views.
+              </p>
+              <a href="https://limassolgreens.com" target="_blank" rel="noopener noreferrer" className="inline-block">
+                <Button size="lg" className="group-hover:scale-105 transition-transform">
+                  Visit Website →
+                </Button>
+              </a>
+            </Card>
+
+            --Vikla Golf
+            <Card className="p-8 group hover:shadow-xl transition-all border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-4 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl shadow-lg">
+                  <Golf size={32} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-2xl font-semibold">Vikla Golf & Country Club</h3>
+                  <p className="text-sm text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full inline-block mt-1">
+                    20-25 min drive
+                  </p>
+                </div>
+              </div>
+              <p className="text-foreground/80 mb-6 leading-relaxed">
+                Family-friendly <strong>18-hole course</strong> nestled in Limassol mountains. Relaxed atmosphere with
+                pool, restaurant, and breathtaking mountain views.
+              </p>
+              <a href="https://www.vikla4golf.com" target="_blank" rel="noopener noreferrer" className="inline-block">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="group-hover:scale-105 transition-transform bg-transparent"
+                >
+                  View Course →
+                </Button>
+              </a>
+            </Card>
+          </div>
+        </div>
+      </section> */}
+
       {/* Accessibility & Transportation */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-4xl font-semibold mb-4 text-center">Connectivity & Transportation</h2>
           <p className="text-lg text-foreground/80 text-center mb-12 max-w-2xl mx-auto">
-            Zakaki's strategic location provides excellent connectivity throughout Cyprus and internationally, 
-            with easy access to both major airports and coastal highways.
+            Zakaki's strategic location provides excellent connectivity throughout Cyprus and internationally, with easy
+            access to both major airports and coastal highways.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -328,28 +409,28 @@ export default function LocationPage() {
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Prime Seafront Location</h3>
                   <p className="text-foreground/70">
-                    Just 1.5 km from Lady's Mile Beach, one of Limassol's most beautiful beaches with crystal-clear 
-                    Mediterranean waters and stunning sunset views.
+                    Just 1.5 km from Lady's Mile Beach, one of Limassol's most beautiful beaches with crystal-clear
+                    Mediterranean waters and stunning sunset views. 10-15 minutes to Limassol Greens Golf Course.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Walkable & Safe Neighborhood</h3>
                   <p className="text-foreground/70">
-                    Quiet residential area with tree-lined streets, dedicated pedestrian paths, and excellent safety 
+                    Quiet residential area with tree-lined streets, dedicated pedestrian paths, and excellent safety
                     record, perfect for families and professionals.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Year-Round Mediterranean Climate</h3>
                   <p className="text-foreground/70">
-                    Enjoy 280+ days of sunshine annually with mild winters and warm summers, perfect for outdoor 
+                    Enjoy 280+ days of sunshine annually with mild winters and warm summers, perfect for outdoor
                     activities and al fresco dining throughout the year.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-2">International Community</h3>
                   <p className="text-foreground/70">
-                    Zakaki is home to expatriates from around the world, offering a cosmopolitan atmosphere while 
+                    Zakaki is home to expatriates from around the world, offering a cosmopolitan atmosphere while
                     maintaining authentic Cypriot charm and hospitality.
                   </p>
                 </div>

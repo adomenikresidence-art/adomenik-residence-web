@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -6,7 +7,16 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-serif text-xl font-semibold mb-4">A. DomeNik Residence</h3>
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <Image
+                src="/logo_adomenik.png"
+                alt="A. DomeNik Residence Logo"
+                width={48}
+                height={48}
+                className="h-12 w-auto object-contain"
+              />
+              <h3 className="font-serif text-xl font-semibold">A. DomeNik Residence</h3>
+            </Link>
             <p className="text-sm text-background/80">
               Boutique luxury living with premium materials and unrivaled location.
             </p>

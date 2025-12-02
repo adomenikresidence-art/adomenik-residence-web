@@ -8,11 +8,11 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Available Apartments | Luxury Zakaki Limassol Residences",
-  description: "Browse 2 available luxury apartments in Zakaki, Limassol. 3-4 bedroom residences with private roof gardens from €370,000. Mediterranean views, premium finishes.",
+  description: "Browse luxury apartments in Zakaki, Limassol. 4 of 6 units sold. 2 premium residences with private roof gardens from €370,000 remaining.",
   keywords: "apartments for sale Zakaki, luxury penthouses Limassol, Cyprus property for sale, Zakaki real estate, roof garden apartments Cyprus",
   openGraph: {
     title: "Available Luxury Apartments | Zakaki Limassol",
-    description: "2 exclusive luxury apartments available in Zakaki, Limassol. Premium residences with roof gardens from €370,000.",
+    description: "4 of 6 units sold. 2 exclusive luxury apartments available in Zakaki, Limassol. Premium residences with roof gardens from €370,000.",
     url: "https://a-domenik-residence.com/apartments",
     images: [
       {
@@ -66,7 +66,75 @@ export default function ApartmentsPage() {
         "53.3m² private roof garden",
         "22.6m² covered veranda",
       ],
-    }
+    },
+    {
+      id: "urban-luxury-1",
+      name: "Urban Luxury Apartment",
+      floor: "2nd Floor",
+      bedrooms: 2,
+      bathrooms: 2,
+      sqm: "84.1",
+      veranda: "20",
+      roofGarden: "40",
+      status: "Sold",
+      image: "/apartment-frontview.jpg",
+      features: [
+        "Floor-to-ceiling windows",
+        "Private balcony with sea glimpses",
+        "Elevator access",
+      ],
+    },
+    {
+      id: "metropolitan-1",
+      name: "Metropolitan Masterpiece",
+      floor: "1st Floor",
+      bedrooms: 2,
+      bathrooms: 2,
+      sqm: "83.8",
+      veranda: "22",
+      roofGarden: "45",
+      status: "Sold",
+      image: "/apartment-frontview.jpg",
+      features: [
+        "Prime ground level access",
+        "Private garden terrace",
+        "Enhanced privacy",
+      ],
+    },
+    {
+      id: "executive-1",
+      name: "Executive Residence",
+      floor: "2nd Floor",
+      bedrooms: 2,
+      bathrooms: 2,
+      sqm: "84.1",
+      veranda: "21",
+      roofGarden: "42",
+      status: "Sold",
+      image: "/apartment-frontview.jpg",
+      features: [
+        "Mediterranean coastal views",
+        "Walk-in closets with custom storage",
+        "Elevator access",
+      ],
+    },
+    {
+      id: "elite-1",
+      name: "Elite Sanctuary",
+      floor: "1st Floor",
+      bedrooms: 2,
+      bathrooms: 2,
+      sqm: "83.8",
+      veranda: "23",
+      roofGarden: "48",
+      status: "Sold",
+      image: "/apartment-frontview.jpg",
+      features: [
+        "Private garden courtyard",
+        "Enhanced outdoor living",
+        "Prime location access",
+      ],
+    },
   ]
 
   return (
@@ -111,12 +179,12 @@ export default function ApartmentsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="space-y-4">
             <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-              2 Units Available in Zakaki
+              4 of 6 Units Sold • 2 Remaining
             </div>
-            <h1 className="font-serif text-5xl lg:text-6xl font-semibold text-balance">Available Apartments</h1>
+            <h1 className="font-serif text-5xl lg:text-6xl font-semibold text-balance">Luxury Apartments</h1>
             <p className="text-lg text-foreground/80 max-w-2xl">
-              Discover our exclusive collection of luxury residences in Zakaki, Limassol. Each thoughtfully designed 
-              to offer the pinnacle of sophisticated Mediterranean living with private roof gardens, stunning views, and premium finishes.
+              Discover our exclusive collection of luxury residences in Zakaki, Limassol. 4 units successfully sold. 
+              2 premium residences with private roof gardens remaining from €370,000.
             </p>
           </div>
         </div>
@@ -195,8 +263,11 @@ export default function ApartmentsPage() {
 
                   {/* Price and CTA */}
                   <div className="border-t border-border pt-4 mt-4">
+                    {apt.status === "Available" && (
+                      <p className="text-3xl font-serif font-semibold mb-4">{apt.price}</p>
+                    )}
                     {apt.status === "Available" ? (
-                      <Link href={`/apartments/${apt.id}`} passHref>
+                      <Link href={`/apartments/${apt.id}`}>
                         <Button className="w-full">
                           View Details
                         </Button>
@@ -226,7 +297,7 @@ export default function ApartmentsPage() {
             Our sales team would love to show you these exceptional residences in Zakaki and discuss the perfect 
             apartment for your Mediterranean lifestyle in Limassol.
           </p>
-          <Link href="/contact" passHref>
+          <Link href="/contact">
             <Button size="lg">Contact Our Sales Team</Button>
           </Link>
         </div>

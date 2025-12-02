@@ -42,12 +42,27 @@ const apartment = {
   shortDescription: "Spacious corner residence with the largest roof garden and 270-degree panoramic views",
   fullDescription: "This exceptional residence redefines luxury Mediterranean living. Situated on the 3rd floor with prime corner positioning for maximum natural light and views, this 2-bedroom residence offers 83.8m² of premium living space, a 22.6m² veranda, and the development's largest private roof garden at 53.3m². The corner location ensures unparalleled privacy and brightness, while the expansive roof garden creates endless possibilities for outdoor entertaining and relaxation under the Cyprus sun.",
   images: [
-    "/apartment-frontview.jpg",
-    "/apartments/bedroom.jpg",
-    "/apartments/kitchen.jpg",
-    "/apartments/living-room.jpg",
-    "/apartments/roofgarden.jpg"
-  ],
+      "/apartment-frontview.jpg",
+      "/apartments/bedroom.jpg",
+      "/apartments/kitchen.jpg",
+      "/apartments/living-room.jpg",
+      "/apartments/roofgarden.jpg",
+      "/floor-plans/0.jpg",
+      "/floor-plans/1.jpg",
+      "/floor-plans/2.jpg",
+      "/floor-plans/3.jpg",
+      "/floor-plans/4.jpg",
+      "/floor-plans/5.jpg",
+      "/floor-plans/6.jpg",
+      "/floor-plans/7.jpg",
+      "/floor-plans/8.jpg",
+      "/floor-plans/9.jpg",
+      "/floor-plans/10.jpg",
+      "/floor-plans/11.jpg",
+      "/floor-plans/12.jpg",
+      "/floor-plans/13.jpg",
+      "/floor-plans/14.jpg"
+    ],
   features: [
     "Floor-to-ceiling windows with Mediterranean views",
     "270-degree panoramic sea and city views",
@@ -55,8 +70,9 @@ const apartment = {
     "Provision for jacuzzi installation",
     "Energy-efficient A+",
     "Private storage room",
-    "Two covered parking spaces",
-    "Fully air-conditioned"
+    "One covered parking spaces",
+    "Fully air-conditioned",
+    "Provision for photovoltaic solar panels"
   ]
 }
 
@@ -183,7 +199,7 @@ export default function PenthouseSuitePage() {
                 </div>
                 <div className="flex justify-between py-2 border-b border-border">
                   <span className="text-foreground/60">Parking</span>
-                  <span className="font-semibold">2 Covered Spaces</span>
+                  <span className="font-semibold">1 Covered Space</span>
                 </div>
                 <div className="flex justify-between py-2">
                   <span className="text-foreground/60">Status</span>
@@ -209,6 +225,104 @@ export default function PenthouseSuitePage() {
           </div>
         </div>
       </section>
+
+      {/* Other Available Apartment Comparison */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-serif text-3xl font-semibold mb-12 text-center">Compare with Other Available Residence</h2>
+          
+          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Current Apartment Card */}
+            <Card className="p-8 text-center border-2 border-primary/20">
+              <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                This Residence
+              </div>
+              <h3 className="font-serif text-2xl font-semibold mb-6">{apartment.name}</h3>
+              <div className="space-y-4 mb-8">
+                <div>
+                  <p className="text-4xl font-serif font-semibold text-primary">{apartment.price}</p>
+                </div>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="text-foreground/60">Interior</span>
+                    <p className="font-semibold">{apartment.area}m²</p>
+                  </div>
+                  <div>
+                    <span className="text-foreground/60">Roof Garden</span>
+                    <p className="font-semibold">{apartment.roofGarden}m²</p>
+                  </div>
+                </div>
+              </div>
+              <Link href={`/apartments/${apartment.id}#top`}>
+                <Button size="lg" className="w-full">View Full Details</Button>
+              </Link>
+            </Card>
+
+            {/* Other Apartment Card */}
+            <Card className="p-8 text-center border-2 border-gray-200">
+              <div className="inline-block bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                Other Available
+              </div>
+              <h3 className="font-serif text-2xl font-semibold mb-6">
+                {apartment.id === "penthouse-suite" ? "Rooftop Suite" : "Penthouse Suite"}
+              </h3>
+              <div className="space-y-4 mb-8">
+                <div>
+                  <p className="text-4xl font-serif font-semibold">
+                    {apartment.id === "penthouse-suite" ? "€380,000" : "€370,000"}
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="text-foreground/60">Interior</span>
+                    <p className="font-semibold">
+                      {apartment.id === "penthouse-suite" ? "83.8m²" : "84.1m²"}
+                    </p>
+                  </div>
+                  <div>
+                    <span className="text-foreground/60">Roof Garden</span>
+                    <p className="font-semibold">
+                      {apartment.id === "penthouse-suite" ? "53.3m²" : "44.6m²"}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <Link 
+                href={apartment.id === "penthouse-suite" ? "/apartments/grand-corner-residence#top" : "/apartments/penthouse-suite#top"}
+              >
+                <Button size="lg" variant="outline" className="w-full">View Details</Button>
+              </Link>
+            </Card>
+          </div>
+
+          {/* Comparison Highlights */}
+          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="bg-white p-6 rounded-xl shadow-sm border">
+              <h4 className="font-semibold text-lg mb-3 text-primary">
+                {apartment.roofGarden > 50 
+                  ? `Largest roof garden (${apartment.roofGarden}m²)` 
+                  : `Spacious roof garden (${apartment.roofGarden}m²)`}
+              </h4>
+              <p className="text-foreground/70 text-sm">
+                {apartment.roofGarden > 50 
+                  ? `Enjoy the development's largest private outdoor space at ${apartment.roofGarden}m²` 
+                  : `Generous ${apartment.roofGarden}m² private outdoor area`}
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border">
+              <h4 className="font-semibold text-lg mb-3 text-primary">
+                {apartment.price === "€370,000" ? 'Best Value Option' : 'Premium Choice'}
+              </h4>
+              <p className="text-foreground/70 text-sm">
+                {apartment.price === "€370,000" 
+                  ? `€10,000 less than alternative with comparable premium features`
+                  : 'Largest outdoor space justifies premium positioning'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <Footer />
     </div>

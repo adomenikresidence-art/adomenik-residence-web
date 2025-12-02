@@ -9,7 +9,7 @@ const geistMono = Geist_Mono({ subsets: ["latin"] })
 const crimsonText = Crimson_Text({ subsets: ["latin"], weight: ["400", "600"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://a-domenik-residence.com'), // Replace with your actual domain
+  metadataBase: new URL('https://a-domenik-residence.com'),
   title: {
     default: "Luxury Apartments in Zakaki, Limassol | Premium Cyprus Real Estate",
     template: "%s | Luxury Zakaki Apartments Limassol"
@@ -74,7 +74,12 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code', // Add your Google Search Console verification code
   },
-    generator: 'v0.app'
+  generator: 'v0.app',
+  icons: {
+    icon: '/favicon/favicon.ico',
+    shortcut: '/favicon/favicon-16x16.png',
+    apple: '/favicon/apple-touch-icon.png',
+  }
 }
 
 export default function RootLayout({
@@ -85,6 +90,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon Links */}
+        <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        
+        {/* Theme Colors */}
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+        
+        {/* Canonical & Geo Meta */}
         <link rel="canonical" href="https://a-domenik-residence.com" />
         <meta name="geo.region" content="CY-04" />
         <meta name="geo.placename" content="Zakaki, Limassol" />
