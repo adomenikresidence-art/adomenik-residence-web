@@ -10,6 +10,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import ImageCarousel from "@/components/image-carousel"
+export const dynamicParams = false
 
 // Apartment data
 const apartmentsData = {
@@ -147,12 +148,13 @@ export async function generateMetadata({
   }
 }
 
-// Generate static paths for both apartments
-export function generateStaticParams() {
-  return Object.keys(apartmentsData).map((id) => ({
-    id: id,
-  }))
+export async function generateStaticParams() {
+  return [
+    { id: 'penthouse-suite' },
+    { id: 'grand-corner-residence' }
+  ]
 }
+
 
 export default function ApartmentDetailPage({ 
   params 
@@ -481,3 +483,4 @@ export default function ApartmentDetailPage({
   )
 
 }
+
