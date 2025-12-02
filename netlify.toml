@@ -2,14 +2,7 @@
   command = "npm run build"
   publish = ".next"
 
+# This plugin is all you need for Next.js on Netlify.
+# It handles routing, SSR, and ISR automatically.
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-[build.environment]
-  NODE_VERSION = "18"
-
-# Redirects for Next.js
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
