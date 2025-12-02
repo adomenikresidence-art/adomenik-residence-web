@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Location - Zakaki, Limassol | Prime Seafront Location",
     description: "Prime Zakaki location near Mediterranean seafront, Lady's Mile Beach, and Limassol Marina.",
-    url: "https://anidomenikresidence.com/location",
+    url: "https://a-domenik-residence.com/location",
     images: [
       {
         url: "/urban-walking-street-neighborhood.jpg",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://anidomenikresidence.com/location"
+    canonical: "https://a-domenik-residence.com/location"
   }
 }
 

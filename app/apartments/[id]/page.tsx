@@ -130,7 +130,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${apartment.name} | Zakaki Limassol`,
       description: apartment.shortDescription,
-      url: `https://adomenikresidence.com/apartments/${params.id}`,
+      url: `https://a-domenik-residence.com/apartments/${params.id}`,
       images: [
         {
           url: apartment.images[0],
@@ -141,7 +141,7 @@ export async function generateMetadata({
       ]
     },
     alternates: {
-      canonical: `https://adomenikresidence.com/apartments/${params.id}`
+      canonical: `https://a-domenik-residence.com/apartments/${params.id}`
     }
   }
 }

@@ -1,32 +1,40 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://yourdomain.com'
-  
+  const baseUrl = "https://a-domenik-residence.com"
+
+  const lastModified = new Date()
+
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      lastModified,
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${baseUrl}/project`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/location`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/apartments`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
+      lastModified,
+      changeFrequency: "daily",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ]
 }

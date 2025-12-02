@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Project | Luxury Zakaki Apartments Limassol",
     description: "LEED Gold certified luxury development in Zakaki, Limassol. 52 floors of architectural excellence.",
-    url: "https://yourdomain.com/project",
+    url: "https://a-domenik-residence.com/project",
     images: [
       {
         url: "/apartment-angleview1.jpg",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://yourdomain.com/project"
+    canonical: "https://a-domenik-residence.com/project"
   }
 }
 

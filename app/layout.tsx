@@ -9,7 +9,7 @@ const geistMono = Geist_Mono({ subsets: ["latin"] })
 const crimsonText = Crimson_Text({ subsets: ["latin"], weight: ["400", "600"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://yourdomain.com'), // Replace with your actual domain
+  metadataBase: new URL('https://a-domenik-residence.com'), // Replace with your actual domain
   title: {
     default: "Luxury Apartments in Zakaki, Limassol | Premium Cyprus Real Estate",
     template: "%s | Luxury Zakaki Apartments Limassol"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourdomain.com",
+    url: "https://a-domenik-residence.com",
     siteName: "Luxury Zakaki Apartments Limassol",
     title: "Luxury Apartments in Zakaki, Limassol | Premium Cyprus Real Estate",
     description: "Exclusive boutique luxury apartments in Zakaki, Limassol. Only 2 units remaining. Premium materials, LEED-certified, world-class amenities.",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://yourdomain.com"
+    canonical: "https://a-domenik-residence.com"
   },
   verification: {
     google: 'your-google-verification-code', // Add your Google Search Console verification code
@@ -85,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://yourdomain.com" />
+        <link rel="canonical" href="https://a-domenik-residence.com" />
         <meta name="geo.region" content="CY-04" />
         <meta name="geo.placename" content="Zakaki, Limassol" />
         <meta name="geo.position" content="34.684944;33.027703" />
@@ -111,8 +111,8 @@ export default function RootLayout({
                 "latitude": "34.684944",
                 "longitude": "33.027703"
               },
-              "url": "https://yourdomain.com",
-              "priceRange": "€€€€"
+              "url": "https://a-domenik-residence.com",
+              "priceRange": "370000-380000€"
             })
           }}
         />

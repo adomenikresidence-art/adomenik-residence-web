@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Us | Luxury Zakaki Apartments Limassol",
     description: "Get in touch with our sales team. Schedule viewings, investment inquiries, Cyprus relocation assistance.",
-    url: "https://adomenikresidence.com/contact",
+    url: "https://a-domenik-residence.com/contact",
     type: "website",
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "Schedule viewings and inquiries for luxury apartments in Zakaki, Limassol, Cyprus."
   },
   alternates: {
-    canonical: "https://adomenikresidence.com/contact"
+    canonical: "https://a-domenik-residence.com/contact"
   },
   robots: {
     index: true,

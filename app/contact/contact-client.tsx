@@ -18,6 +18,8 @@ export default function ContactPageClient() {
   })
 
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
   
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -37,10 +39,26 @@ export default function ContactPageClient() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => {
+    setErrorMsg(null)
+    setSubmitting(true)
+
+    try {
+      const res = await fetch("/.netlify/functions/contact-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error || "Failed to send message")
+      }
+
+      setSubmitted(true)
+
+      // reset form
       setFormData({
         name: "",
         email: "",
@@ -48,9 +66,14 @@ export default function ContactPageClient() {
         inquiryType: "general",
         message: "",
       })
-      setSubmitted(false)
-    }, 3000)
+    } catch (err: any) {
+      console.error(err)
+      setErrorMsg(err.message || "Something went wrong. Please try again.")
+    } finally {
+      setSubmitting(false)
+    }
   }
+
 
   const contactInfo = [
     {
@@ -93,7 +116,7 @@ export default function ContactPageClient() {
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "Contact DomeNik Residence Zakaki Limassol",
-            "url": "https://adomenikresidence.com/contact",
+            "url": "https://a-domenik-residence.com/contact",
             "mainEntity": {
               "@type": "Residence",
               "name": "DomeNik Residence Zakaki Limassol",

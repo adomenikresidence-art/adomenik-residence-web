@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Available Luxury Apartments | Zakaki Limassol",
     description: "2 exclusive luxury apartments available in Zakaki, Limassol. Premium residences with roof gardens from €370,000.",
-    url: "https://adomenikresidence.com/apartments",
+    url: "https://a-domenik-residence.com/apartments",
     images: [
       {
         url: "/apartment-frontview.jpg",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://adomenikresidence.com/apartments"
+    canonical: "https://a-domenik-residence.com/apartments"
   }
 }
 
