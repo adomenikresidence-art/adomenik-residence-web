@@ -6,3 +6,9 @@
 # It handles routing, SSR, and ISR automatically.
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Redirects for Next.js
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
