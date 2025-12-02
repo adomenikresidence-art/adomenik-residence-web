@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description: "Exclusive boutique luxury apartments in Zakaki, Limassol. Only 2 units remaining. Premium materials, LEED-certified, world-class amenities.",
     images: [
       {
-        url: "/luxury-modern-apartment-interior-with-floor-to-cei.jpg",
+        url: "/apartment-frontview.jpg",
         width: 1200,
         height: 630,
         alt: "Luxury apartment interior in Zakaki, Limassol"
