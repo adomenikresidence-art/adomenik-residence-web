@@ -38,7 +38,7 @@ exports.handler = async (event) => {
     const adminHtml = `
       <div style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;color:#0f172a;">
         <h2 style="margin:0 0 12px 0;">New Contact Form Submission</h2>
-        <p style="margin:0 0 16px 0;color:#6b7280;">DomeNik Residence – Zakaki, Limassol</p>
+        <p style="margin:0 0 16px 0;color:#6b7280;">A. DomeNik Residence – Zakaki, Limassol</p>
 
         <table style="border-collapse:collapse;width:100%;max-width:600px;margin-bottom:16px;">
           <tbody>
@@ -74,12 +74,12 @@ exports.handler = async (event) => {
       </div>
     `
 
-    const adminSubject = `New ${inquiryLabel} inquiry – DomeNik Residence`
+    const adminSubject = `New ${inquiryLabel} inquiry – A. DomeNik Residence`
 
     // 2) Confirmation email to user
     const userHtml = `
       <div style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;color:#0f172a;">
-        <h2 style="margin:0 0 12px 0;">Thank you for contacting DomeNik Residence</h2>
+        <h2 style="margin:0 0 12px 0;">Thank you for contacting A. DomeNik Residence</h2>
         <p style="margin:0 0 16px 0;color:#6b7280;">
           Dear ${name || "Guest"},
         </p>
@@ -96,7 +96,7 @@ exports.handler = async (event) => {
           If you need to add anything else, you can send us an email on adomenikresidence@gmail.com.
         </p>
         <p style="margin-top:24px;font-size:12px;color:#9ca3af;">
-          DomeNik Residence – Zakaki, Limassol, Cyprus
+          A. DomeNik Residence – Zakaki, Limassol, Cyprus
         </p>
       </div>
     `
@@ -133,3 +133,4 @@ exports.handler = async (event) => {
   }
 
 }
+
