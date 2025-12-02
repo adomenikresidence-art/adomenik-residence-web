@@ -2,7 +2,6 @@ import { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://a-domenik-residence.com"
-
   const lastModified = new Date()
 
   return [
@@ -29,6 +28,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "daily",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/apartments/penthouse-suite`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/apartments/grand-corner-residence`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/contact`,

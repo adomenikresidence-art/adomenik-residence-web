@@ -66,75 +66,7 @@ export default function ApartmentsPage() {
         "53.3m² private roof garden",
         "22.6m² covered veranda",
       ],
-    },
-    {
-      id: "urban-luxury-1",
-      name: "Urban Luxury Apartment",
-      floor: "2nd Floor",
-      bedrooms: 2,
-      bathrooms: 2,
-      sqm: "84.1",
-      veranda: "20",
-      roofGarden: "40",
-      status: "Sold",
-      image: "/apartment-frontview.jpg",
-      features: [
-        "Floor-to-ceiling windows",
-        "Private balcony with sea glimpses",
-        "Elevator access",
-      ],
-    },
-    {
-      id: "metropolitan-1",
-      name: "Metropolitan Masterpiece",
-      floor: "1st Floor",
-      bedrooms: 2,
-      bathrooms: 2,
-      sqm: "83.8",
-      veranda: "22",
-      roofGarden: "45",
-      status: "Sold",
-      image: "/apartment-frontview.jpg",
-      features: [
-        "Prime ground level access",
-        "Private garden terrace",
-        "Enhanced privacy",
-      ],
-    },
-    {
-      id: "executive-1",
-      name: "Executive Residence",
-      floor: "2nd Floor",
-      bedrooms: 2,
-      bathrooms: 2,
-      sqm: "84.1",
-      veranda: "21",
-      roofGarden: "42",
-      status: "Sold",
-      image: "/apartment-frontview.jpg",
-      features: [
-        "Mediterranean coastal views",
-        "Walk-in closets with custom storage",
-        "Elevator access",
-      ],
-    },
-    {
-      id: "elite-1",
-      name: "Elite Sanctuary",
-      floor: "1st Floor",
-      bedrooms: 2,
-      bathrooms: 2,
-      sqm: "83.8",
-      veranda: "23",
-      roofGarden: "48",
-      status: "Sold",
-      image: "/apartment-frontview.jpg",
-      features: [
-        "Private garden courtyard",
-        "Enhanced outdoor living",
-        "Prime location access",
-      ],
-    },
+    }
   ]
 
   return (
@@ -149,7 +81,7 @@ export default function ApartmentsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            "itemListElement": apartments.filter(apt => apt.status === "Available").map((apt, index) => ({
+            "itemListElement": apartments.map((apt, index) => ({
               "@type": "ListItem",
               "position": index + 1,
               "item": {
@@ -263,11 +195,8 @@ export default function ApartmentsPage() {
 
                   {/* Price and CTA */}
                   <div className="border-t border-border pt-4 mt-4">
-                    {apt.status === "Available" && (
-                      <p className="text-3xl font-serif font-semibold mb-4">{apt.price}</p>
-                    )}
                     {apt.status === "Available" ? (
-                      <Link href={`/apartments/${apt.id}`}>
+                      <Link href={`/apartments/${apt.id}`} passHref>
                         <Button className="w-full">
                           View Details
                         </Button>
@@ -297,7 +226,7 @@ export default function ApartmentsPage() {
             Our sales team would love to show you these exceptional residences in Zakaki and discuss the perfect 
             apartment for your Mediterranean lifestyle in Limassol.
           </p>
-          <Link href="/contact">
+          <Link href="/contact" passHref>
             <Button size="lg">Contact Our Sales Team</Button>
           </Link>
         </div>
