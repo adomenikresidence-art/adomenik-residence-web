@@ -267,7 +267,7 @@ export default function ApartmentsPage() {
                       <p className="text-3xl font-serif font-semibold mb-4">{apt.price}</p>
                     )}
                     {apt.status === "Available" ? (
-                      <Link href={`/apartments/${apt.id}`}>
+                      <Link href={`/apartments/[id]/${apt.id}`}>
                         <Button className="w-full">
                           View Details
                         </Button>
