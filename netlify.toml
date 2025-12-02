@@ -6,5 +6,3 @@
 # It handles routing, SSR, and ISR automatically.
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-[build]
-  command = "pnpm install --no-frozen-lockfile && pnpm run build"
