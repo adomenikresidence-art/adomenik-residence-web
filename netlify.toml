@@ -6,3 +6,5 @@
 # It handles routing, SSR, and ISR automatically.
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    mode = "prerender"
