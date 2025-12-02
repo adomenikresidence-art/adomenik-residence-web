@@ -160,7 +160,9 @@ export default function ApartmentDetailPage({
 }: { 
   params: { id: string } 
 }) {
+  console.log('Apartment ID requested:', params.id);
   const apartment = apartmentsData[params.id as ApartmentId]
+  console.log('Apartment data:', apartment);
 
   // If apartment doesn't exist, show 404
   if (!apartment) {
@@ -482,5 +484,6 @@ export default function ApartmentDetailPage({
   )
 
 }
+
 
 
