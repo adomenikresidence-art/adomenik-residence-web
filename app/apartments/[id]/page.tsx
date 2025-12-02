@@ -9,7 +9,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import ImageCarousel from "@/components/image-carousel"
-export const dynamicParams = false
+export const dynamicParams = true
 
 // Apartment data
 const apartmentsData = {
@@ -482,4 +482,5 @@ export default function ApartmentDetailPage({
   )
 
 }
+
 
