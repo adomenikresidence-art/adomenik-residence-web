@@ -32,7 +32,7 @@ const apartment = {
   id: "penthouse-suite",
   name: "Penthouse Suite",
   floor: 3,
-  bedrooms: 3,
+  bedrooms: 2,
   bathrooms: 2,
   area: 84.1,
   veranda: 22.7,

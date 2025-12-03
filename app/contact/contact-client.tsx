@@ -476,24 +476,43 @@ export default function ContactPageClient() {
               </div>
             </details>
 
+            {/* FAQ item 6 */}
             <details className="group border border-border rounded-xl bg-background/60">
               <summary className="flex items-center justify-between px-4 md:px-6 py-4 cursor-pointer list-none">
                 <span className="font-semibold text-sm md:text-base text-foreground">
-                  Can I pay in stages while the project is still under construction?
+                  Are under-construction apartments cheaper?
                 </span>
                 <span className="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary/5 text-primary transition-transform group-open:rotate-180">
                   <ChevronDown className="h-4 w-4" />
                 </span>
               </summary>
-              <div className="px-4 md:px-6 pb-5 pt-1 text-sm md:text-base text-foreground/80 border-t border-border/60">
-                Yes. Payments are normally made in agreed stages as the project progresses,
-                based on the terms set out in your purchase agreement. An initial upfront
-                payment is required, and the remaining amounts are scheduled over
-                construction milestones. The exact structure and timing of payments are
-                calculated and confirmed by your lawyer, so you will have a clear legal
-                payment plan before you commit.
+              <div className="px-4 md:px-6 pb-5 pt-1 text-sm md:text-base text-foreground/80 border-t border-border/60 space-y-3">
+                <p>Yes, off-plan properties are typically <span className="font-semibold text-primary">10-30% cheaper</span> than completed units.</p>
+                
+                <div className="space-y-2">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Lower purchase price - Developers offer discounts to secure early funding</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Price lock - Secure today&apos;s price before construction completion increases values</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Capital appreciation - Properties often gain 10-20% value during construction</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Flexible payments - Staggered payments based on construction milestones</span>
+                  </div>
+                </div>
+                
+                <p className="pt-2">In Cyprus, off-plan apartments in premium developments like A. DomeNik Residence provide excellent investment returns as values rise with completion.</p>
               </div>
             </details>
+
+
 
           </div>
         </div>
@@ -563,6 +582,14 @@ export default function ContactPageClient() {
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Yes. Payments are normally made in agreed stages as the project progresses, based on the terms set out in your purchase agreement. An initial upfront payment is required, and the remaining amounts are scheduled over construction milestones. The exact structure and timing of payments are calculated and confirmed by your lawyer, so you will have a clear legal payment plan before you commit."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are under-construction apartments cheaper?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, off-plan properties are typically 10-30% cheaper than completed units. Key advantages: Lower purchase price - Developers offer discounts to secure early funding; Price lock - Secure today&apos;s price before construction completion increases values; Capital appreciation - Properties often gain 10-20% value during construction; Flexible payments - Staggered payments based on construction milestones. In Cyprus, off-plan apartments in premium developments like A. DomeNik Residence provide excellent investment returns as values rise with completion."
                 }
               }
             ],

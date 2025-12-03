@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
-import { Train, Utensils, Palette, Waves, ShoppingBag, Bold as Golf } from "lucide-react"
+import { Train, Utensils, Palette, Waves, ShoppingBag, Bold as GolfCourse } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
 
@@ -36,8 +36,8 @@ export default function LocationPage() {
       category: "Coastal Living",
       icon: Waves,
       locations: [
-        "Lady's Mile Beach (1.5 km)",
-        "Limassol Marina (4 km)",
+        "Lady's Mile Beach (3 km)",
+        "Limassol Marina (5.5 km)",
         "Mediterranean Seafront Promenade",
         "Beach clubs and water sports",
       ],
@@ -56,7 +56,7 @@ export default function LocationPage() {
       category: "Shopping & Retail",
       icon: ShoppingBag,
       locations: [
-        "My Mall Limassol (3 km)",
+        "My Mall Limassol (1 km)",
         "Ermes Department Store (nearby)",
         "Local boutiques and shops",
         "Farmers' markets",
@@ -65,13 +65,18 @@ export default function LocationPage() {
     {
       category: "Culture & Recreation",
       icon: Palette,
-      locations: ["Limassol Old Town (5 km)", "Limassol Castle", "Municipal Gardens", "Cultural festivals year-round"],
+      locations: [
+        "City of Dreams Casino Resort (1.6 km)",
+        "Limassol Old Town (5 km)", 
+        "Limassol Castle", 
+        "Municipal Gardens", 
+        "Cultural festivals year-round"],
     },
     {
       category: "Golf & Sports",
-      icon: Golf,
+      icon: GolfCourse,
       locations: [
-        "Limassol Greens Golf Course (10-15 min)",
+        "Limassol Greens Golf Course (3 km)",
         "Vikla Golf & Country Club (20 min)",
         "Driving ranges & academies",
         "Premium golf lifestyle",
@@ -92,23 +97,23 @@ export default function LocationPage() {
   const attractions = [
     {
       name: "City of Dreams Mediterranean",
-      distance: "3 km",
+      distance: "1.6 km",
       description:
         "Luxury integrated resort with world-class casino, entertainment venues, fine dining restaurants, and exclusive hospitality experiences.",
     },
     {
       name: "Lady's Mile Beach",
-      distance: "1.5 km",
+      distance: "3 km",
       description: "Pristine Mediterranean beach with golden sand, perfect for swimming and water sports.",
     },
     {
       name: "Limassol Marina",
-      distance: "4 km",
+      distance: "5.5 km",
       description: "Luxury marina with designer boutiques, gourmet restaurants, and exclusive yachting facilities.",
     },
     {
       name: "Limassol Greens Golf Course",
-      distance: "10-15 min",
+      distance: "3 km",
       description: "Brand new 18-hole championship course (Par 71) next to Cyprus' largest Salt Lake.",
     },
     {
@@ -118,7 +123,7 @@ export default function LocationPage() {
     },
     {
       name: "My Mall Limassol",
-      distance: "3 km",
+      distance: "1 km",
       description: "Major shopping center with international brands, cinema, and dining options.",
     },
     {
@@ -128,16 +133,16 @@ export default function LocationPage() {
     },
     {
       name: "Limassol City Center",
-      distance: "4 km",
+      distance: "5 km",
       description: "Business district, government offices, and commercial hub of the city.",
     },
   ]
 
   const schools = [
-    { name: "The Heritage Private School", distance: "2.5 km", type: "K-12 (British Curriculum)" },
-    { name: "The Grammar School Limassol", distance: "5 km", type: "K-12 (British Curriculum)" },
-    { name: "American Academy Limassol", distance: "6 km", type: "K-12 (American Curriculum)" },
-    { name: "Cyprus University of Technology", distance: "7 km", type: "Higher Education" },
+    { name: "The Heritage Private School", distance: "13 km", type: "K-12 (British Curriculum)" },
+    { name: "The Grammar School Limassol", distance: "12 km", type: "K-12 (British Curriculum)" },
+    { name: "American Academy Limassol", distance: "5 km", type: "K-12 (American Curriculum)" },
+    { name: "Cyprus University of Technology", distance: "4.5 km", type: "Higher Education" },
   ]
 
   return (

@@ -32,7 +32,7 @@ const apartment = {
   id: "grand-corner-residence",
   name: "Rooftop Suite",
   floor: 3,
-  bedrooms: 3,
+  bedrooms: 2,
   bathrooms: 2,
   area: 83.8,
   veranda: 22.6,
